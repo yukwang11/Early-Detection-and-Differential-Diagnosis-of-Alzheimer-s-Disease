@@ -12,6 +12,11 @@ The primary objectives of our research are:
 1. **To capture the temporal relationships within patients' routine lab-test histories using embedding techniques.**
 2. **To develop a classification model that uses lab-test sequences for early AD detection and differential diagnosis, minimizing the reliance on specialized tests.**
 
+
+## Data
+The data used in this study is the **MIMIC dataset**, which consists of publicly available patient records. All data is de-identified and aggregated from open-access sources, no personally identifiable information is involved. There are no plans to redistribute additional data generated during the project, as all results from the project are directly based only on existing datasets. Given the sensitive nature of the data, we adhered to the MIMIC Data Use Agreement, which complies with ethical and privacy guidelines to protect patient confidentiality. 
+
+
 ## Methodology
 ### Early Detection vs. Diagnosis
 Early detection uses general lab-test data available before AD-specific tests, while diagnosis relies on a complete set of diagnostic tests.
