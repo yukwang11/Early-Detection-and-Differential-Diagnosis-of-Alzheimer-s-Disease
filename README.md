@@ -1,4 +1,4 @@
-# Early Detection and Differential Diagnosis of Alzheimer’s Disease
+# Utilizing Sequential Information of General Lab-test Results and Diagnoses History for Differential Diagnosis of Dementia
 
 This project explores using sequential lab-test history to detect Alzheimer’s Disease (AD) early and differential diagnosis of alzheimer's disease. Specifically, we focus on using widely available general lab-test results, which are often taken as routine screenings, as a more accessible basis for diagnosis compared to more specialized and late-stage tests like cerebrospinal fluid (CSF) analysis or PET scans.
 
