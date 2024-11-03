@@ -13,6 +13,17 @@ The primary objectives of our research are:
 2. **To develop a classification model that uses lab-test sequences for early AD detection and differential diagnosis, minimizing the reliance on specialized tests.**
 
 ## Methodology
+### Early Detection vs. Diagnosis
+Early detection uses general lab-test data available before AD-specific tests, while diagnosis relies on a complete set of diagnostic tests.
+
+### General vs. Specialized Lab Tests
+Our approach emphasizes widely accessible general lab tests, aiming to create a tool not reliant on specialized procedures.
+
+### Dementia Cohort Phenotyping
+We selected dementia patients from the MIMIC database based on standardized ICD codes, yielding a diverse cohort for early detection and diagnosis.
+
+### Lab-Test History Embedding
+We embedded lab-test histories with `word2vec`(`BERT` were also tested), reduced dimensions with PCA, and used t-SNE for visualization, capturing key sequential features.
 
 ### Classification Models
 
