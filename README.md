@@ -43,7 +43,8 @@ To ensure robustness, we also experimented with alternative models such as GRU a
 ## Files
   - `Alzheimer_Embeddings_word2vec.ipynb`  : generates, visualizes, and saves the embeddings of labtests
   - `Data_wrangling.ipynb` : experiment on dataset 
-  - `Alzheimer_Build_Model(diag_delta).ipynb`  : Core notebook, include all necessary code 
+  - `Alzheimer_Build_Model(diag_delta).ipynb`  : Core notebook, include all necessary code
+  - `results_draw.ipynb` : Contains most plots used in the paper
   - The `experiment` folder contains the code for the different models we tested, including Transformer, GRU, and other variants. Each script in this folder is an implementation of a unique model setup or experimental adjustment, allowing comparisons across methods.
 
 
