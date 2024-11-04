@@ -40,9 +40,11 @@ Inspired by Natural Language Processing techniques, we used LSTM to process lab-
 
 To ensure robustness, we also experimented with alternative models such as GRU and Transformer-based models, available in the `experiment` folder. These models allowed us to compare different architectures for processing sequential data and identify the most effective structure.
 
-
-## Experiment Folder
-The `experiment` folder contains the code for the different models we tested, including Transformer, GRU, and other variants. Each script in this folder is an implementation of a unique model setup or experimental adjustment, allowing comparisons across methods.
+## Files
+  - `Alzheimer_Embeddings_word2vec.ipynb`  : generates, visualizes, and saves the embeddings of labtests
+  - `Data_wrangling.ipynb` : experiment on dataset 
+  - `Alzheimer_Build_Model(diag_delta).ipynb`  : Core notebook, include all necessary code 
+  - The `experiment` folder contains the code for the different models we tested, including Transformer, GRU, and other variants. Each script in this folder is an implementation of a unique model setup or experimental adjustment, allowing comparisons across methods.
 
 
 ---
