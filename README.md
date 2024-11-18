@@ -12,6 +12,7 @@ The primary objectives of our research are:
 1. **To capture the temporal relationships within patients' routine lab-test histories using embedding techniques.**
 2. **To develop a classification model that uses lab-test sequences for early AD detection and differential diagnosis, minimizing the reliance on specialized tests.**
 
+---
 
 ## Data
 The data used in this study is the **MIMIC dataset**, which consists of publicly available patient records. All data is de-identified and aggregated from open-access sources, no personally identifiable information is involved. There are no plans to redistribute additional data generated during the project, as all results from the project are directly based only on existing datasets. Given the sensitive nature of the data, we adhered to the MIMIC Data Use Agreement, which complies with ethical and privacy guidelines to protect patient confidentiality. 
@@ -40,6 +41,30 @@ Inspired by Natural Language Processing techniques, we used LSTM to process lab-
 
 To ensure robustness, we also experimented with alternative models such as GRU and Transformer-based models, available in the `experiment` folder. These models allowed us to compare different architectures for processing sequential data and identify the most effective structure.
 
+
+---
+
+## Results
+
+### Embedding Visualization
+- Lab-test embeddings grouped semantically similar tests (e.g., CSF and kidney function tests) into distinct clusters, demonstrating the effectiveness of the embedding approach.
+
+### Performance Comparison:
+| Task                         | Method       | Accuracy | Precision | Recall | F1-Score | AUC   |
+|------------------------------|--------------|----------|-----------|--------|----------|-------|
+| **Early Detection (1 year)** | LR-Lasso     | 0.602    | 0.634     | 0.804  | 0.709    | 0.591 |
+|                              | DT-Lasso     | 0.699    | 0.759     | 0.732  | 0.746    | 0.690 |
+|                              | RF-Lasso     | 0.763    | 0.750     | 0.911  | 0.823    | 0.794 |
+|                              | LSTM-D       | **0.806**| **0.762** | **0.889**| **0.821**| **0.874**|
+| **Diagnosis (All Data)**     | LR-Lasso     | 0.761    | 0.768     | 0.730  | 0.748    | 0.760 |
+|                              | RF-Lasso     | 0.921    | 0.907     | 0.951  | 0.929    | 0.948 |
+|                              | LSTM-D       | **0.948**| **0.925** | **0.975**| **0.949**| **0.964**|
+
+- LSTM-D models performed comparably or better than RF in early detection and diagnosis, demonstrating their ability to capture sequential patterns.
+
+---
+
+
 ## Files
   - `Alzheimer_Embeddings_word2vec.ipynb`  : generates, visualizes, and saves the embeddings of labtests
   - `Data_wrangling.ipynb` : experiment on dataset 
@@ -47,5 +72,16 @@ To ensure robustness, we also experimented with alternative models such as GRU a
   - `results_draw.ipynb` : Contains most plots used in the paper
   - The `experiment` folder contains the code for the different models we tested, including Transformer, GRU, and other variants. Each script in this folder is an implementation of a unique model setup or experimental adjustment, allowing comparisons across methods.
 
-
 ---
+
+## Conclusion
+
+This project demonstrates the feasibility of early AD detection and differential diagnosis using general lab-test sequences. By drawing inspiration from Natural Language Processing, we showcased the value of embedding techniques and sequential models for identifying subtle temporal patterns in routine lab data.
+
+**Future Directions**:
+1. Explore more sophisticated temporal modeling methods (e.g., attention mechanisms).
+2. Validate findings with larger, more diverse datasets beyond ICU populations.
+3. Investigate nonlinear dimensionality reduction techniques for embeddings.
+
+
+
